@@ -1,0 +1,52 @@
+function openRanking(evt, rankingName) {
+    var i, tabcontent, tablinks;
+    
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(rankingName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Click on the first tablink on page load
+document.getElementsByClassName('tablinks')[0].click();
+
+// Add to your existing script.js file
+
+function playSong(songId) {
+  // Pause any currently playing song
+  document.querySelectorAll('audio').forEach(audio => {
+    if (audio.id !== songId) {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.parentElement.classList.remove('playing');
+    }
+  });
+
+  // Play the selected song
+  const song = document.getElementById(songId);
+  if (song.paused) {
+    song.play();
+    song.parentElement.classList.add('playing');
+  } else {
+    song.pause();
+    song.parentElement.classList.remove('playing');
+  }
+}
+
+// Event to remove 'playing' class when song ends
+document.querySelectorAll('audio').forEach(audio => {
+  audio.onended = () => {
+    audio.parentElement.classList.remove('playing');
+  };
+});

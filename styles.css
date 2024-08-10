@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #0099ff, #001066);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.circle-text-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: rotate 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-svg {
+    height: 100px; /* Adjust the size of the circle */
+    width: 100px; /* Adjust the size of the circle */
+    animation: rotate 10s linear infinite;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; /* Adjust based on the size of the circle */
+}
+
+#logo {
+    font-size: 5.55vw; /* Increase the size of the logo text */
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* Make sure the logo is positioned correctly relative to the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures the logo is above the spinning text */
+}
+
+
+
+/* Add additional styles for your social media interaction icons */
+.homepage {
+    /* ... other styles ... */
+    position: relative; /* Added for positioning the circle and button */
+}
+
+.logo-container {
+    /* ... other styles ... */
+    display: flex; /* Aligns child elements vertically */
+    flex-direction: column; /* Stack them on top of each other */
+    align-items: center; /* Center align the flex items */
+}
+
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20 pixels from the bottom */
+    left: 20px; /* 20 pixels from the left */
+    background-color: #3498db; /* Stylish blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1em; /* Adjust the size of the text as needed */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Darker blue on hover for visual feedback */
+}

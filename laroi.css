@@ -1,0 +1,165 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(#fe019a, #001046);
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Style the tab */
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: white;
+  color: #764ba2;
+  transform: scale(1.1);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+  color: #764ba2;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s;
+}
+
+/* Fade-in animation for tab content */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Add a global style for h3 elements within tab content */
+.tabcontent h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Add to your existing styles.css file */
+
+.song-list {
+  text-align: center;
+}
+
+.song {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.song:hover {
+  color: #hgh676; /* Change the color on hover */
+  transform: scale(1.05); /* Make it pop a bit */
+}
+
+.playing {
+  color: #FFFF00; /* Highlight the playing song */
+}
+
+
+
+/* Rest of your CSS */
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20 pixels from the bottom */
+    left: 20px; /* 20 pixels from the left */
+    background-color: #3498db; /* Stylish blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1em; /* Adjust the size of the text as needed */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Darker blue on hover for visual feedback */
+}
+.year-section h4 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  
+  #Homepage h4 {
+    color: #ff0050; /* Kid Laroi's vibrant color theme */
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Responsive iframe for embedded content */
+iframe {
+    width: 100%;
+    height: 300px; /* Adjust based on your layout */
+    border: none;
+}
+/* ...other styles... */
+
+#upcoming-events, #merchandise {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    margin-bottom: 20px;
+}
+
+#upcoming-events h4, #merchandise h4 {
+    color: #FFD700; /* Golden color for headers */
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #ff0050; /* Kid Laroi's vibrant color theme */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4081; /* Lighter red on hover */
+}
+
+/* ...other styles... */

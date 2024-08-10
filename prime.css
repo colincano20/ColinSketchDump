@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+ background: radial-gradient(circle at center, #0099ff, #89CFF0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Assign a class for each PRIME flavor in your CSS */
+.ice-pop { background-color: #85C1E9; } /* Example color for Ice Pop flavor */
+.lemon-lime { background-color: #7DCEA0; } /* Example color for Lemon-Lime flavor */
+.cherry-freeze { background-color: #C0392B; } /* Example color for Cherry Freeze flavor */
+.blue-raspberry { background-color: #5DADE2; } /* Example color for Blue Raspberry flavor */
+.glowberry { background-color: #8E44AD; } /* Example color for Glowberry flavor */
+.tropical-punch { background-color: #F39C12; } /* Example color for Tropical Punch flavor */
+/* ... continue for each flavor ... */
+.schedule-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #CED2CC; /* White background for the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table td {
+  border-style: solid;
+  border-width: 3px;
+}
+table th {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black
+}
+h1 {
+    text-align: center;
+    color: #004dff; /* PRIME's vibrant blue */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #004dff; /* PRIME blue for table borders */
+}
+
+table th {
+    background-color: #004dff; /* PRIME blue for headers */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+table tr:nth-child(odd) {
+    background-color: #ccddff; /* Light PRIME blue for odd rows */
+}
+
+table tr:hover {
+    background-color: #bfd7ff; /* Slightly darker blue on hover for feedback */
+}
+
+
+/* Rest of your CSS */
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20 pixels from the bottom */
+    left: 20px; /* 20 pixels from the left */
+    background-color: #3498db; /* Stylish blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1em; /* Adjust the size of the text as needed */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Darker blue on hover for visual feedback */
+}

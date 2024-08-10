@@ -1,0 +1,135 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+
+        }
+        header {
+            background-color: #121212; /* Darker shade of black */
+            color: #ff00ff; /* Neon pink for some text */
+            padding: 20px 40px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #00ffff; /* Neon blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .ranking-link {
+            display: inline-block;
+            background-color: #ff00ff; /* Neon pink */
+            color: #000; /* Black text */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .ranking-link:hover {
+            background-color: #00ffff; /* Neon blue on hover */
+			
+		body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  height: 100%;
+  background-color: #000; /* Dark background for contrast */
+}
+
+#greetingBanner {
+  position: absolute;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100px; /* Adjust as needed */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  font-size: 3em; /* Adjust size as needed */
+  color: #0f0; /* Bright green for the "lights" effect */
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #0f0, /* Glowing effect */
+    0 0 40px #0f0,
+    0 0 80px #0f0,
+    0 0 120px #0f0;
+  white-space: nowrap; /* Keeps text on one line */
+  font-family: 'Arial', sans-serif; /* Choose a bold, impactful font */
+  animation: slideIn 10s infinite; /* Adjust time as needed */
+}
+
+@keyframes slideIn {
+  0% { left: -100%; }
+  10% { left: 0; }
+  90% { left: 0; }
+  100% { left: 100%; }
+}
+
+        }
+		
+/* Add this to ensure the banner styling does not affect other elements */
+#greetingBanner {
+  position: fixed; /* Use fixed to ensure it's placed relative to the viewport */
+  top: 20px; /* Adjust based on desired vertical position */
+  left: 0;
+  right: 0;
+  text-align: center; /* Centers the text horizontally */
+  font-size: 2em; /* Adjust based on desired size */
+  color: #FFC0CB; /* Adjust based on desired color */
+  text-shadow: 0 0 5px #FFFFFF, 0 0 15px #FFD700, 0 0 30px #FF69B4; /* Example shadow for "lights" effect */
+  animation: slideAcross 10s infinite linear;
+}
+
+@keyframes slideAcross {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Ensure other global styles are reset to their original state before the changes */
+body, html {
+  /* Revert to original styles */
+}
+
+/* Rest of your CSS */
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20 pixels from the bottom */
+    left: 20px; /* 20 pixels from the left */
+    background-color: #3498db; /* Stylish blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1em; /* Adjust the size of the text as needed */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Darker blue on hover for visual feedback */
+}

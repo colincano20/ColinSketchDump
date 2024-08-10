@@ -1,0 +1,83 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+#checklist-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+#checklist {
+    list-style-type: none;
+    padding: 0;
+}
+
+#checklist li {
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #555;
+}
+
+#checklist li label {
+    text-decoration: none;
+}
+
+#checklist li input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+/* Add to your existing styles.css file */
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.checked-item {
+  animation: fadeOut 1s forwards;
+}
+#congratsMessage {
+  color: red;
+  font-size: 2em;
+  visibility: hidden; /* Start as hidden */
+}
+body {
+    font-family: 'Roboto', sans-serif; /* This is an example; replace with your chosen font */
+    /* ... other styles ... */
+}
+
+#congratsMessage {
+    color: red;
+    font-size: 2em;
+    visibility: hidden; /* Start as hidden */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fix the position */
+    width: 100%; /* Full width */
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Rest of your CSS */
+.back-button {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* 20 pixels from the bottom */
+    left: 20px; /* 20 pixels from the left */
+    background-color: #3498db; /* Stylish blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the font bold */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1em; /* Adjust the size of the text as needed */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Darker blue on hover for visual feedback */
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin's Side Quests</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Colin's Side Quests</h1>
+        <nav>
+            <ul>
+                <li><a href="laroi.html">Laroi</a></li>
+                <li><a href="igcaptions.html">Hit list</a></li>
+                <li><a href="soulcut.html">Culinary Experiments</a></li>
+                <li><a href="prime.html">Prime Schedule</a></li>
+				<li><a href="bermuda-triangle.html"> Bermuda</a></li>
+			
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="welcome-text">Embark on a journey through my side quests. Discover the stories, creations, and adventures that fuel my passion.</p>
+        <a href="laroi.html" class="ranking-link">Laroi</a>
+        <a href="igcaptions.html" class="ranking-link">Hit List</a>
+        <a href="soulcut.html" class="ranking-link">Culinary Experiments</a>
+        <a href="prime.html" class="ranking-link">Prime Schedule</a>
+		 <a href="bermuda-triangle.html" class="ranking-link">Bermuda</a>
+        <!-- Add more links as needed -->
+    </main>
+	
+	
+	<div id="greetingBanner">Good Evening!</div>
+
+<script>
+function updateGreeting() {
+  const hour = new Date().getHours();
+  const greeting = document.getElementById('greetingBanner');
+  if (hour >= 18 || hour < 6) {
+    greeting.innerText = "Good Evening!";
+  } else if (hour < 12) {
+    greeting.innerText = "Good Morning!";
+  } else {
+    greeting.innerText = "Good Afternoon!";
+  }
+}
+
+// Run on load
+updateGreeting();
+</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<a href="homepage.html" class="back-button">&larr; Back to Home</a>
+
+</body>
+</html>
