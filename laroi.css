@@ -208,17 +208,4 @@ iframe {
         height: auto;
         border-bottom: 1px solid #ccc;
         margin-bottom: 10px;
-    }
-    .buy-button {
-        background-color: #3498db; /* Stylish blue background color */
-    color: #ffffff; /* White text color */
-    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
-    text-decoration: none; /* Removes underline from the link */
-    font-weight: bold; /* Makes the font bold */
-    border-radius: 5px; /* Rounded corners for the button */
-    font-size: 1em; /* Adjust the size of the text as needed */
-    transition: background-color 0.3s; /* Smooth background color transition on hover */
-    }
-    .buy-button:hover {
-        background-color: #cc0000;
-    }
+  
