@@ -50,3 +50,17 @@ document.querySelectorAll('audio').forEach(audio => {
     audio.parentElement.classList.remove('playing');
   };
 });
+
+// Poll
+const options = document.querySelectorAll('.option');
+    const voteResult = document.getElementById('voteResult');
+    let totalVotes = 0;
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            options.forEach(opt => opt.classList.remove('selected')); // Remove selected from all
+            option.classList.add('selected'); // Add selected to clicked option
+            totalVotes = 1; // Increment total votes by 1
+            voteResult.textContent = `Total Votes: ${totalVotes}`;
+        });
+    });
