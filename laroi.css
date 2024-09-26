@@ -162,4 +162,19 @@ iframe {
     background-color: #ff4081; /* Lighter red on hover */
 }
 
-/* ...other styles... */
+/* ...poll styles... */
+ .option {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .selected {
+            background-color: #d3f8d3;
+        }
+
+        .vote-count {
+            margin-top: 10px;
+        }
