@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #ff4081; /* Pink color for the heading */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 20px;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 1.5em;
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4081, #25c5ff); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #25c5ff, #ff4081); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+p {
+    margin: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button a {
+    background-color: #ff5722; /* Orange color for back button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
