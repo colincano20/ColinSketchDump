@@ -1,4 +1,4 @@
-cd ColinSketchDump
+cd ColinSketchDump x2
 
 git add .
 
