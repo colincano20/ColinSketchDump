@@ -30,11 +30,11 @@ body, html {
 .circle-svg {
     height: 100px; /* Adjust the size of the circle */
     width: 100px; /* Adjust the size of the circle */
-    animation: rotate 10s linear infinite;
+    animation: rotate 7s linear infinite;
     transform-origin: 50% 50%;
     position: absolute;
     top: 50%;
-    margin-top: -50px; /* Adjust based on the size of the circle */
+    margin-top: -5px; /* Adjust based on the size of the circle */
 }
 
 #logo {
