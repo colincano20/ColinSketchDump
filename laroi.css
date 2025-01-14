@@ -74,16 +74,13 @@ body {
 
 .song {
   cursor: pointer;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s;
+  padding: 10px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
 }
 
 .song:hover {
-  color: #555; /* Change the color on hover */
+  color: #hgh676; /* Change the color on hover */
   transform: scale(1.05); /* Make it pop a bit */
 }
 
@@ -236,22 +233,4 @@ iframe {
 .snippet-versions .version:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ff0050;
-}
-.dropdown-content {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #444;
-  border-radius: 5px;
-}
-
-.version {
-  cursor: pointer;
-  padding: 5px;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.version:hover {
-  background-color: #666;
 }
