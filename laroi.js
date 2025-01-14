@@ -91,3 +91,41 @@ function playSnippet(snippetId) {
   snippet.play();
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize vote counts from localStorage or set to zero
+  const options = ['BABY_IM_BACK', 'STICK_WITH_ME', 'PICK_SIDES', 'NIGHTS_LIKE_THIS_P2', 'HATRED'];
+  let votes = JSON.parse(localStorage.getItem('votes')) || {};
+
+  // Ensure all options have a vote count
+  options.forEach(option => {
+      if (!votes[option]) {
+          votes[option] = 0;
+      }
+  });
+
+  // Function to cast a vote
+  window.castVote = function(option) {
+      // Increment the vote count for the selected option
+      votes[option]++;
+      // Save the updated votes to localStorage
+      localStorage.setItem('votes', JSON.stringify(votes));
+      // Update the displayed results
+      displayResults();
+  };
+
+  // Function to display the results
+  function displayResults() {
+      const totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+      document.getElementById('voteResult').textContent = `Total Votes: ${totalVotes}`;
+      const voteDetails = document.getElementById('voteDetails');
+      voteDetails.innerHTML = ''; // Clear previous details
+      for (const [option, count] of Object.entries(votes)) {
+          const percentage = totalVotes ? ((count / totalVotes) * 100).toFixed(2) : 0;
+          const optionText = option.replace(/_/g, ' '); // Replace underscores with spaces for display
+          voteDetails.innerHTML += `<p>${optionText}: ${count} votes (${percentage}%)</p>`;
+      }
+  }
+
+  // Display results on page load
+  displayResults();
+});
