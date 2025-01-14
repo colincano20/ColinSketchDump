@@ -275,8 +275,16 @@
     <audio id="song53" src="laroiaudio/offthelot.mp4"></audio>  
 	<div onclick="playSong('song45')" class="song">Somebody New</div>
     <audio id="song45" src="laroiaudio/somebodynew.mp3"></audio>
-	<div onclick="playSong('song56')" class="song">Wrong Way</div>
-    <audio id="song56" src="laroiaudio/wrongway.mp3"></audio>
+	<div class="song-container">
+        <div onclick="toggleVersions('wrongway')" class="song">Wrong Way</div>
+        <div id="wrongway-versions" class="snippet-versions">
+            <div onclick="playSnippet('wrongway1')" class="version">Version 1</div>
+            <audio id="wrongway1" src="laroiaudio/wrongway.mp3"></audio>
+    
+            <div onclick="playSnippet('wrongway2')" class="version">Version 2</div>
+            <audio id="wrongway2" src="laroiaudio/wrongway2.mp4"></audio>
+        </div>
+    </div>   
 	
 	
 	
