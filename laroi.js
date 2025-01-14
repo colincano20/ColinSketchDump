@@ -91,7 +91,7 @@ function playSnippet(snippetId) {
   snippet.play();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Initialize vote counts from localStorage or set to zero
   const options = ['BABY_IM_BACK', 'STICK_WITH_ME', 'PICK_SIDES', 'NIGHTS_LIKE_THIS_P2', 'HATRED'];
   let votes = JSON.parse(localStorage.getItem('votes')) || {};
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Function to cast a vote
-  window.castVote = function(option) {
+  window.castVote = function (option) {
       // Increment the vote count for the selected option
       votes[option]++;
       // Save the updated votes to localStorage
@@ -122,7 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
       for (const [option, count] of Object.entries(votes)) {
           const percentage = totalVotes ? ((count / totalVotes) * 100).toFixed(2) : 0;
           const optionText = option.replace(/_/g, ' '); // Replace underscores with spaces for display
-          voteDetails.innerHTML += `<p>${optionText}: ${count} votes (${percentage}%)</p>`;
+          voteDetails.innerHTML += `
+              <p>
+                  ${optionText}: ${count} votes (${percentage}%)
+                  <div class="progress-bar" style="width: 70%;">
+                      <div class="progress-bar-inner" style="width: ${percentage}%;"></div>
+                  </div>
+              </p>
+          `;
       }
   }
 

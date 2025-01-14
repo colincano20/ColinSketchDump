@@ -163,32 +163,101 @@ iframe {
 }
 
 /* ...poll styles... */
-.option {
-  padding: 10px 20px;
-  margin: 5px 0;
-  border: 2px solid #007BFF;
-  border-radius: 5px;
-  cursor: pointer;
+/* General Poll Styling */
+#poll {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
   text-align: center;
-  background-color: #f0f0f0;
-  transition: background-color 0.3s;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Poll Header */
+#poll h4 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Option Buttons */
+.option {
+  display: inline-block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .option:hover {
-  background-color: #e0e0ff;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #FFD700;
+  transform: scale(1.05);
 }
 
-.vote-count, #voteDetails p {
-  margin-top: 15px;
+.option.selected {
+  background: #FFD700;
+  color: #1e1e2f;
+  border-color: #fff;
   font-weight: bold;
-  color: #ffffff;
 }
 
-.selected {
-  background-color: #d1e7dd;
-  border-color: #28a745;
-  color: #155724;
+/* Results Section */
+.vote-count {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #FFD700;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
+
+#voteDetails p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Progress Bar for Results */
+#voteDetails p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+}
+
+.progress-bar::after {
+  content: '';
+  height: 100%;
+  background: #FFD700;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+
 
 
   .merch-grid {
