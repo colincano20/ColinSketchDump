@@ -68,20 +68,26 @@ const options = document.querySelectorAll('.option');
         });
     });
 function toggleVersions(songId) {
-    const versions = document.getElementById(`${songId}-versions`);
-    // Toggle visibility
-    versions.style.display = (versions.style.display === "block") ? "none" : "block";
+  const versions = document.getElementById(`${songId}-versions`);
+
+  // Toggle display between "block" and "none"
+  if (versions.style.display === "block") {
+      versions.style.display = "none";
+  } else {
+      versions.style.display = "block";
+  }
 }
 
 function playSnippet(snippetId) {
-    // Stop any currently playing audio
-    const allAudio = document.querySelectorAll("audio");
-    allAudio.forEach((audio) => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
+  // Stop all other audio
+  const allAudio = document.querySelectorAll("audio");
+  allAudio.forEach((audio) => {
+      audio.pause();
+      audio.currentTime = 0;
+  });
 
-    // Play the selected snippet
-    const snippet = document.getElementById(snippetId);
-    snippet.play();
+  // Play selected snippet
+  const snippet = document.getElementById(snippetId);
+  snippet.play();
 }
+
