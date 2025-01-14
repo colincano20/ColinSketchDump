@@ -163,32 +163,32 @@ iframe {
 }
 
 /* ...poll styles... */
- .option {
-            padding: 10px 20px;
-            margin: 5px 0;
-            border: 2px solid #007BFF;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            text-align: center;
-            background-color: #f0f0f0;
-            transition: background-color 0.3s;
-        }
+.option {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
 
-        .option:hover {
-            background-color: #e0e0ff;
-        }
+.option:hover {
+  background-color: #e0e0ff;
+}
 
-        .selected {
-            background-color: #d1e7dd;
-            border-color: #28a745;
-            color: #155724;
-        }
+.vote-count, #voteDetails p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-        .vote-count, .selected-option {
-            margin-top: 15px;
-            font-weight: bold;
-        }
+.selected {
+  background-color: #d1e7dd;
+  border-color: #28a745;
+  color: #155724;
+}
 
 
   .merch-grid {
