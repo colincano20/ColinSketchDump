@@ -67,3 +67,27 @@ const options = document.querySelectorAll('.option');
             selectedOptionText.textContent = `You voted for: ${option.getAttribute('data-option')}`;
         });
     });
+    function toggleVersions(songId) {
+      // Get the dropdown or modal for the song
+      const versions = document.getElementById(`${songId}-versions`);
+      // Toggle visibility
+      if (versions.style.display === "block") {
+          versions.style.display = "none";
+      } else {
+          versions.style.display = "block";
+      }
+  }
+  
+  function playSnippet(snippetId) {
+      // Stop any currently playing audio
+      const allAudio = document.querySelectorAll("audio");
+      allAudio.forEach((audio) => {
+          audio.pause();
+          audio.currentTime = 0;
+      });
+  
+      // Play the selected snippet
+      const snippet = document.getElementById(snippetId);
+      snippet.play();
+  }
+  
