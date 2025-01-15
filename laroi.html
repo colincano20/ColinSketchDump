@@ -206,10 +206,35 @@
   <div class="song-list">
     <div class="year-section">
     <h4>2024</h4>
-         <div onclick="playSong('song6')" class="song">Anything</div>
-    <audio id="song6" src="laroiaudio/anything.mp4"></audio>
+    <div class="song-container">
+        <div onclick="toggleVersions('anything')" class="song">Anything</div>
+        <div id="anything-versions" class="snippet-versions">
+            <div onclick="playSnippet('anything1')" class="version">Snippet 1</div>
+            <audio id="anything1" src="laroiaudio/anything.mp4"></audio>
+    
+            <div onclick="playSnippet('anything2')" class="version">Snippet 2</div>
+            <audio id="anything2" src="laroiaudio/anything2.mp3"></audio>
+        </div>
+    </div>
+    <div onclick="playSong('dontwanna')" class="song">Don't Wanna</div>
+    <audio id="dontwanna" src="laroiaudio/dontwanna.mp3"></audio>
+    <div onclick="playSong('home')" class="song">Home</div>
+    <audio id="home" src="laroiaudio/home.mp4"></audio>
 	<div onclick="playSong('song54')" class="song">Good As It Gets</div>
     <audio id="song54" src="laroiaudio/goodasitgets.mp4"></audio>
+   
+    <div class="song-container">
+        <div onclick="toggleVersions('hotgirlsummer')" class="song">Hot Girl Problems</div>
+        <div id="hotgirlsummer-versions" class="snippet-versions">
+            <div onclick="playSnippet('hotgirlsummer1')" class="version">Snippet 1</div>
+            <audio id="wrongway1" src="laroiaudio/hotgirlsummer.mp4.mp3"></audio>
+    
+            <div onclick="playSnippet('hotgirlsummer2')" class="version">Snippet 2</div>
+            <audio id="hotgirlsummer2" src="laroiaudio/hotgirlsummer2.mp4.mp4"></audio>
+        </div>
+    </div>
+    <div onclick="playSong('nooneelse')" class="song">I Don't Want No One Else</div>
+    <audio id="nooneelse" src="laroiaudio/nooneelse.mp4"></audio>
 	 <div onclick="playSong('song52')" class="song">Living Wrong</div>
     <audio id="song52" src="laroiaudio/livingwrong.mp4"></audio>
 	 <div onclick="playSong('song4')" class="song">Love you Now</div>
@@ -218,6 +243,16 @@
     <audio id="song10" src="laroiaudio/lovingyou.mov"></audio>
 	 <div onclick="playSong('song9')" class="song">My Way</div>
     <audio id="song9" src="laroiaudio/myway.mp4"></audio>
+    <div class="song-container">
+        <div onclick="toggleVersions('neveragain')" class="song">Never Again</div>
+        <div id="neveragain-versions" class="snippet-versions">
+            <div onclick="playSnippet('neveragain1')" class="version">Snippet 1</div>
+            <audio id="neveragain1" src="laroiaudio/neveragain3.mp3"></audio>
+    
+            <div onclick="playSnippet('neveragain2')" class="version">Snippet 2</div>
+            <audio id="neveragain2" src="laroiaudio/neveragain2.mov"></audio>
+        </div>
+    </div>   
 	  <div onclick="playSong('song51')" class="song">OKAY, OKAY!</div>
     <audio id="song51" src="laroiaudio/okayokay.mp4"></audio>  
 	 <div onclick="playSong('song5')" class="song">On It</div>
@@ -315,7 +350,10 @@
     <div onclick="playSong('song60')" class="song">Vegas</div>
     <audio id="song60" src="laroiaudio/Vegas.mp4"></audio>
 	
-	
+    <h4>2020</h4>
+	<div onclick="playSong('time')" class="song">Time</div>
+    <audio id="time" src="laroiaudio/time.mp4"></audio>
+
   </div>
 </div>
   </div>
